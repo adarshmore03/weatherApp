@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="design2backend.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+    </head>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        
+    </style>
+    <body>
+        <div class="main_container">
+            <div class="container">
+               
+                <div class="second_container">
+                    
+                    <form  class="inputForm" action="/" method="POST">
+                        <input class="searchInput" type="text" placeholder="Enter City Name" id="searchBar" name="searchBar">
+                        
+                        <button class="searchButton" href="#"><i class="material-icons">
+                            search
+                        </i></button>
+                    </form>
+                    
+                    <ul class="other_content">
+                        <li>Max Temperature:<%=Database.Maxtemp%></li>
+                        <li>Min Temperature:<%=Database.Mintemp%></li>
+                        <li>Wind Speed:<%=Database.windspeed%></li>
+                        <li>Pressure:<%=Database.pressure%></li>
+                        <li>Humidity:<%=Database.humidity%></li>
+                    </ul>
+        
+                   
+                </div>
+            </div>
+
+
+               <div class="container">
+                <div class="container_First">
+                 <div class="Time_content">
+                    <h2>Weather<%=Database.CITYNAME%></h2>
+                 </div>
+                
+                 <div class="icon">
+                    <img src="interfaceimage.jpg" alt class="iconimage">
+                    <h2><%=Database.tempp%> <sup>o</sup>C</h2>
+                    <h2><%=Database.weather%></h2>
+                 </div>
+                </div>
+              </div>
+        </div>
+    
+        
+    </body>
+</html>

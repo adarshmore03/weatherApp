@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="design2backend.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+        <style>
+            body{
+                background-image:url( <%=Database.BgImage%>);
+            }
+        </style>
+    </head>
+    <body >
+
+
+        <!-- <script>
+            document.getElementById("time").innerHTML= new Date().toLocaleString("en-US",{timeZone:"Asia/Kolkata",
+            timeStyle:"medium",hourCycle:"h24"});
+        </script> -->
+
+
+
+        <div class="main_container">
+            <div class="container">
+               
+                <div class="second_container">
+                    
+                    <form class="inputForm" action="/" method="POST">
+                        <input class="searchInput" type="text" placeholder="Enter City Name" id="searchBar" name="searchBar">
+                        
+                        <button class="searchButton" href="#"><i class="material-icons">
+                            search
+                        </i></button>
+                    </form>
+                    
+                    <ul class="other_content">
+                        <li>MaxTemperature: <Bold><%=Database.Maxtemp%><sup>o</sup>C</Bold></li>
+                        <li>MinTemperature: <Bold><%=Database.Mintemp%><sup>o</sup>C</Bold></li>
+                        <li>Wind Speed: <Bold><%=Database.windspeed%> mph</Bold></li>
+                        <li>Pressure: <Bold><%=Database.pressure%> mb</Bold></li>
+                        <li>Humidity: <Bold><%=Database.humidity%> %</Bold></li>
+                    </ul>
+        
+                   
+                </div>
+            </div>
+
+
+            <div class="container">
+                <div class="container_First">
+                 <div class="Time_content">
+                    <h2>Weather of <%=Database.CITYNAME%></h2>
+                 </div>
+                
+                 <div class="icon">
+                    <img src="https://openweathermap.org/img/w/<%=Database.icon%>.png" alt class="iconimage">
+                    <h1><Bold><%=Database.tempp%> <sup>o</sup>C</Bold></h1>
+                    <h2><Bold><italic><%=Database.weather%></italic></Bold></h2>
+                 </div>
+
+
+                </div>
+              </div>
+        </div>
+    
+        
+    </body>
+</html>
